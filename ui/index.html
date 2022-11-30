@@ -44,12 +44,25 @@
             <h1 class="visitor-heading">Visitors : <span id="visitor-count">0</span></h1>
         </div>
         <div class="button-greeting-container">
-            <button class="button-greeting" onclick="changeGreeting()">Change Greeting Language</button>
+            <button class="button-greeting" onclick="changeGreeting()" >Change Greeting Language</button>
         </div>
         <div class="greetings-container">
             <h1 class="greetings-message" id="change-greetings" ">Hello World!</h1>
         </div>
     </div>
+    <script>
+        function changeGreeting(id) {
+            const greetings = [
+                "Hello World!",
+                "Bonjour monde!",
+                "Hallo Welt!",
+                "नमस्ते दुनिया!",
+            ];
+            let ind = Math.floor(Math.random()*(greetings.length-0));
+            
+            document.getElementById("change-greetings").innerText=greetings[ind];
+        }
+    </script>
 </body>
 
 </html>
